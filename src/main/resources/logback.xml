@@ -1,0 +1,21 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d %-5level [%thread] %logger{0}: %msg%n</Pattern>
+            <charset>UTF-8</charset>
+            <outputPatternAsHeader>true</outputPatternAsHeader>
+        </encoder>
+    </appender>
+
+    <logger name="net.ttddyy.dsproxy.listener" level="debug"/>
+
+    <logger name="org.hibernate" level="info"/>
+    <logger name="org.hibernate.event.internal" level="info"/>
+    <logger name="org.hibernate.engine.transaction.internal" level="info"/>
+    <logger name="org.hibernate.cache" level="debug"/>
+
+    <root>
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
